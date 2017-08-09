@@ -4,6 +4,8 @@ MAINTAINER James White <dev.jameswhite+minicron@gmail.com>
 # Install minicron install dependencies
 RUN apt-get update && apt-get install -y curl unzip
 
+RUN rm -f /etc/service/sshd/down
+
 # Install minicron
 ADD install.sh /
 RUN chmod +x /install.sh
